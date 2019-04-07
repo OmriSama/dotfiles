@@ -1,0 +1,12 @@
+[user]
+	name = Omri Gabay
+	email = omri.gabay@pnmac.com
+[http]
+	sslCAinfo = /etc/ssl/certs/ca-certificates.crt
+	sslVerify = true
+[core]
+	editor = code --wait
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
