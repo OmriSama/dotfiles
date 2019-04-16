@@ -122,6 +122,14 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Partial disabling of certain Zsh autocorrections
+# Thanks: https://gist.github.com/vitormil/4364864
+if [ -f ~/.zsh_nocorrect ]; then
+  while read -r COMMAND; do
+    alias $COMMAND="nocorrect $COMMAND"
+  done < ~/.zsh_nocorrect
+fi
+
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white,underline'
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
