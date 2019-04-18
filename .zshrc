@@ -130,6 +130,11 @@ if [ -f ~/.zsh_nocorrect ]; then
   done < ~/.zsh_nocorrect
 fi
 
+# Check to see if the local settings file exists
+if [[ -e ~/.local ]]; then
+	source ~/.local
+fi
+
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white,underline'
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
