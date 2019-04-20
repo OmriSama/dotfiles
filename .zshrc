@@ -131,8 +131,8 @@ if [ -f ~/.zsh_nocorrect ]; then
 fi
 
 # Check to see if the local settings file exists
-if [[ -e ~/.local ]]; then
-	source ~/.local
+if [[ -e ~/.local_config ]]; then
+	source ~/.local_config
 fi
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white,underline'
