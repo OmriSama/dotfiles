@@ -123,7 +123,7 @@ bindsym $mod+a focus parent
   exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
   exec --no-startup-id setxkbmap us,il -option 'grp:lalt_lshift_toggle'
   # Set display for multiple monitors
-  exec --no-startup-id xrandr --output Virtual3 --mode 1920x1080 --pos 0x0 --rotate normal --output Virtual2 --mode 1920x1080 --pos 3840x0 --rotate normal --output Virtual1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output Virtual7 --off --output Virtual6 --off --output Virtual5 --off --output Virtual4 --off --output Virtual8 --off
+  exec --no-startup-id ~/.screenlayout/layout.sh
 
 
   exec_always gsettings set org.gnome.desktop.background show-desktop-icons false # Fix Nautilius issue on Ubuntu
