@@ -2,7 +2,6 @@
 	name = Omri Gabay
 	email = omri.gabay@pnmac.com
 [http]
-	sslCAinfo = /etc/ssl/certs/ca-certificates.crt
 	sslVerify = true
 [core]
 	editor = code --wait
