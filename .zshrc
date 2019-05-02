@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/ogabay/.oh-my-zsh"
+  export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -135,6 +135,7 @@ if [[ -e ~/.local_config ]]; then
 	source ~/.local_config
 fi
 
+typeset -gA ZSH_HIGHLIGHT_STYLES
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white,underline'
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
