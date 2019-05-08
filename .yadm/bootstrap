@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Install zsh
-sudo apt install git wget curl zsh
+# Install zsh and other things
+sudo apt install git wget curl zsh fonts-firacode build-essential g++ gcc
+
+# Install rbenv
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
