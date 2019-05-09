@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Install zsh and other things
-sudo apt install git wget curl zsh fonts-firacode build-essential g++ gcc
+sudo apt install git wget curl zsh fonts-firacode build-essential g++ gcc \
+                  libssl-dev libreadline-dev zlib1g-dev
 
 # Install rbenv
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
