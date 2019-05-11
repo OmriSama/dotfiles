@@ -338,8 +338,8 @@ live_config_reload: true
 # Default:
 #   - (Linux/macOS) /bin/bash --login
 #   - (Windows) powershell
-shell:
- program: wsl.exe
+# shell:
+#  program: wsl.exe
 
 # Windows 10 ConPTY backend (Windows only)
 #
