@@ -136,7 +136,7 @@ if [[ -e ~/.local_config ]]; then
 fi
 
 typeset -gA ZSH_HIGHLIGHT_STYLES
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white,underline'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=240,underline'
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=yellow'
