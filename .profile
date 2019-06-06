@@ -26,5 +26,10 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Check to see if the local settings file exists
+if [[ -e ~/.local_config ]]; then
+	        source ~/.local_config
+fi
+
 export TERMINAL='alacritty'
 
