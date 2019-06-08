@@ -135,6 +135,9 @@ if [[ -e ~/.local_config ]]; then
 	source ~/.local_config
 fi
 
+# Stop correcting rspec to spec
+unsetopt correct_all
+
 typeset -gA ZSH_HIGHLIGHT_STYLES
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=240,underline'
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
