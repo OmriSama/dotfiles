@@ -41,6 +41,12 @@
 "\eOH": beginning-of-line
 "\eOF": end-of-line
 
+# Everything hopefully
+"\e[1;5D": backward-word
+"\e[1;5C": forward-word
+"\e[1;7D": beginning-of-line
+"\e[1;7C": end-of-line
+
 # Allow 8-bit input/output
 #set meta-flag on
 #set convert-meta off
