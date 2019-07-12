@@ -3,8 +3,6 @@
 	email = omri.gabay@pnmac.com
 [http]
 	sslVerify = true
-[core]
-	editor = code --wait
 [diff]
 	tool = default-difftool
 [difftool "default-difftool"]
