@@ -3,9 +3,5 @@
 	email = omri.gabay@pnmac.com
 [http]
 	sslVerify = true
-[diff]
-	tool = default-difftool
-[difftool "default-difftool"]
-	cmd = code --wait --diff $LOCAL $REMOTE
 [pager]
 	branch = false
