@@ -267,8 +267,3 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 for_window [class="^.*"] border pixel 5
-
-gaps inner 20
-gaps outer 10
-
-smart_gaps on
