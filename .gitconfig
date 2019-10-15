@@ -5,3 +5,6 @@
 	sslVerify = true
 [pager]
 	branch = false
+[alias]
+	fap = fetch --all --prune
+	pr = pull --rebase
