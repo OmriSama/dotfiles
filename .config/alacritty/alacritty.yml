@@ -55,15 +55,6 @@ scrolling:
   # scrollback is enabled (history > 0).
   multiplier: 3
 
-  # Faux Scrolling
-  #
-  # The `faux_multiplier` setting controls the number of lines the terminal
-  # should scroll when the alternate screen buffer is active. This is used
-  # to allow mouse scrolling for applications like `man`.
-  #
-  # Specifying `0` will disable faux scrolling.
-  faux_multiplier: 3
-
   # Scroll to the bottom when new text is written to the terminal.
   auto_scroll: false
 
@@ -461,6 +452,10 @@ key_bindings:
   #- { key: H,      mods: Command, action: Hide             }
   #- { key: Q,      mods: Command, action: Quit             }
   #- { key: W,      mods: Command, action: Quit             }
+  - { key: Up,       mods: Alt,     chars: "\x1b[1;5A"     }
+  - { key: Down,     mods: Alt,     chars: "\x1b[1;5B"     }
+  - { key: Left,     mods: Alt,     chars: "\x1bb"         }
+  - { key: Right,    mods: Alt,     chars: "\x1bf"         }
 
   - { key: Paste,                   action: Paste                            }
   - { key: Copy,                    action: Copy                             }
