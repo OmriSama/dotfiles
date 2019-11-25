@@ -63,29 +63,11 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  docker
-  fzf
-  git
-  postgres
-  rbenv
-  ruby
-  ubuntu
-  vscode
-  yarn
-  zsh-256color
   zsh-autosuggestions
-  zsh-history-substring-search
   zsh-syntax-highlighting
 )
-
-# Bullet Train Theme Configs
-BULLETTRAIN_PROMPT_ORDER=(
-  dir
-  git
-)
-BULLETTRAIN_DIR_EXTENDED=0
-BULLETTRAIN_DIR_BG=1 #800000
-
+HISTSIZE=6000
+SAVEHIST=1000
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -118,7 +100,6 @@ alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 alias fconfig="code ~/.config/fish/"
 alias i3config="code ~/.config/i3/"
-alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
