@@ -49,7 +49,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: transparent
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -559,8 +559,10 @@ key_bindings:
       {program: "open", args: ["~/.config/alacritty/alacritty.yml"]}     }
   - { key: N,         mods: Command,      action: SpawnNewInstance       }
   - { key: Space,     mods: Alt,          chars: " "                     }
-  - { key: Left,      mods: Option,       chars: "\eb",                  }
-  - { key: Right,     mods: Option,          chars: "\ef"                }
+  - { key: Left,      mods: Command,       chars: "\eb",                  }
+  - { key: Right,     mods: Command,          chars: "\ef"                }
+  - { key: Left,      mods: Control|Alt,       chars: "\eb",                  }
+  - { key: Right,     mods: Control|Alt,          chars: "\ef"                }
 
   #- { key: Paste,                    action: Paste                            }
   #- { key: Copy,                     action: Copy                             }
