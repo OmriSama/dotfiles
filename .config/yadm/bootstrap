@@ -35,7 +35,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
 
 # Download gitster theme
 wget 'https://raw.githubusercontent.com/shashankmehta/dotfiles/master/thesetup/zsh/.oh-my-zsh/custom/themes/gitster.zsh-theme' \
-  -O "${ZSH_CUSTOM}/themes"
+  -O "${ZSH_CUSTOM}/themes/gitster.zsh-theme"
 
 # Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf \
