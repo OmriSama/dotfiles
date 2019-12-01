@@ -7,7 +7,7 @@ if [ -f /etc/lsb-release ]; then
         gcc libssl-dev libreadline-dev zlib1g-dev
 fi
 
-export ZSH_CUSTOM="~/.oh-my-zsh/custom"
+export ZSH_CUSTOM="/home/ogabay/.oh-my-zsh/custom"
 
 # Install rbenv
 curl -fsSL \
