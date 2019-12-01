@@ -9,3 +9,5 @@
 	fap = fetch --all --prune
 	pr = pull --rebase
 	rom = rebase origin/master
+[credential]
+	helper = cache
