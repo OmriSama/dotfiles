@@ -3,7 +3,7 @@
 if [ -f /etc/lsb-release ]; then
     sudo apt-get update \
     && sudo apt-get upgrade \
-    && sudo apt install git wget curl zsh fonts-firacode build-essential g++ \
+    && sudo apt install git wget curl zsh build-essential g++ \
         gcc libssl-dev libreadline-dev zlib1g-dev
 fi
 
