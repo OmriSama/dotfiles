@@ -125,21 +125,48 @@ fi
 # Stop correcting rspec to spec
 unsetopt correct_all
 
+# Defining colors
+Default='default'
+Green='#00af00'
+Cyan3='#00d7af'
+Red='#ff0000'
+Yellow='#ffff00'
+Blue='#0000ff'
+White='#ffffff'
+LightSeaGreen='#00afaf'
+DeepSkyBlue1='#00afff'
+Yellow3='#afd700'
+GreenYellow='#afff00'
+DeepPink3='#d70087'
+LightSalmon1='#ffaf87'
+Orange1='#ffaf00'
+Grey35='#585858'
+MediumPurple='#8787d7'
+LightSkyBlue3='#87afd7'
+
+# Setting up the highliter
 typeset -gA ZSH_HIGHLIGHT_STYLES
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=240,underline'
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
-ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=yellow'
-ZSH_HIGHLIGHT_STYLES[alias]='fg=default',bold
-ZSH_HIGHLIGHT_STYLES[builtin]='fg=039',bold
-ZSH_HIGHLIGHT_STYLES[function]='fg=039'
-ZSH_HIGHLIGHT_STYLES[command]='fg=default',bold
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=214'
-ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=214'
-ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=blue'
-ZSH_HIGHLIGHT_STYLES[path]='fg=154'
-ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=154',bold
-ZSH_HIGHLIGHT_STYLES[path_approx]='fg=yellow'
-ZSH_HIGHLIGHT_STYLES[globbing]='fg=green'
-ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=green'
-ZSH_HIGHLIGHT_STYLES[assign]='fg=162'
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+
+# Defining different highlight colors
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=$Grey35,underline"
+ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=$Red",bold
+ZSH_HIGHLIGHT_STYLES[reserved-word]="fg=$Yellow"
+ZSH_HIGHLIGHT_STYLES[alias]="fg=$Default",bold
+ZSH_HIGHLIGHT_STYLES[builtin]="fg=$LightSeaGreen",bold
+ZSH_HIGHLIGHT_STYLES[function]="fg=$DeepSkyBlue1",bold
+ZSH_HIGHLIGHT_STYLES[command]="fg=$Default",bold
+ZSH_HIGHLIGHT_STYLES[precommand]="fg=$Default,bg=$Grey35",bold
+ZSH_HIGHLIGHT_STYLES[commandseparator]="fg=$Orange1",bold
+ZSH_HIGHLIGHT_STYLES[hashed-command]="fg=$Blue"
+ZSH_HIGHLIGHT_STYLES[path]="fg=$GreenYellow",bold
+ZSH_HIGHLIGHT_STYLES[path_prefix]="fg=$GreenYellow"
+ZSH_HIGHLIGHT_STYLES[globbing]="fg=$Green"
+ZSH_HIGHLIGHT_STYLES[history-expansion]="fg=$Cyan3"
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=$LightSkyBlue3"
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=$MediumPurple"
+ZSH_HIGHLIGHT_STYLES[assign]="fg=$LightSalmon1"
+
+# Check to see if there are iTerm2 integrations, and load them.
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
