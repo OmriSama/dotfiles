@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -21,7 +21,7 @@ ZSH_THEME="gitster"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -68,7 +68,6 @@ fpath+=( ${ZDOTDIR:-~}/.zsh_functions "${fpath[@]}" )
 plugins=(
   bundler
   rbenv
-  tmux
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -102,20 +101,10 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="code ~/.zshrc"
-alias ohmyzsh="code ~/.oh-my-zsh"
-alias fconfig="code ~/.config/fish/"
-alias i3config="code ~/.config/i3/"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Partial disabling of certain Zsh autocorrections
-# Thanks: https://gist.github.com/vitormil/4364864
-if [ -f ~/.zsh_nocorrect ]; then
-  while read -r COMMAND; do
-    alias $COMMAND="nocorrect $COMMAND"
-  done < ~/.zsh_nocorrect
-fi
+alias zshconfig="${EDITOR} ~/.zshrc"
+alias ohmyzsh="${EDITOR} ~/.oh-my-zsh"
+alias fconfig="${EDITOR} ~/.config/fish/"
+alias i3config="${EDITOR} ~/.config/i3/"
 
 # Check to see if the local settings file exists
 if [[ -e ~/.local_config ]]; then
@@ -166,6 +155,9 @@ ZSH_HIGHLIGHT_STYLES[history-expansion]="fg=$Cyan3"
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=$LightSkyBlue3"
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=$MediumPurple"
 ZSH_HIGHLIGHT_STYLES[assign]="fg=$LightSalmon1"
+
+# FZF Integration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Check to see if there are iTerm2 integrations, and load them.
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
