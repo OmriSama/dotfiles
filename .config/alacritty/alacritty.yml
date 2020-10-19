@@ -30,3 +30,8 @@ font:
   use_thin_strokes: true
 
 draw_bold_text_with_bright_colors: false
+
+key_bindings:
+  - { key: I, mods: Command, action: ToggleViMode }
+  - { key: Left, mods: Command, chars: "\x1b[1;5D" }
+  - { key: Right, mods: Command, chars: "\x1b[1;5C" }
