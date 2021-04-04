@@ -108,7 +108,7 @@ alias i3config="${EDITOR} ~/.config/i3/"
 
 # Check to see if the local settings file exists
 if [[ -e ~/.local_config ]]; then
-	source ~/.local_config
+  source ~/.local_config
 fi
 
 # Stop correcting rspec to spec
@@ -157,8 +157,11 @@ ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=$MediumPurple"
 ZSH_HIGHLIGHT_STYLES[assign]="fg=$LightSalmon1"
 
 # FZF Integration
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [[ -f ~/.fzf.zsh ]]; then
+  source ~/.fzf.zsh
+fi
 
 # Check to see if there are iTerm2 integrations, and load them.
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
+if [[ -f ~/.iterm2_shell_integration.zsh ]]; then
+  source ~/.iterm2_shell_integration.zsh
+fi
