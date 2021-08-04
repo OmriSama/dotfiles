@@ -68,12 +68,12 @@ fpath+=( ${ZDOTDIR:-~}/.zsh_functions "${fpath[@]}" )
 plugins=(
   bundler
   rbenv
+  pyenv
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
 HISTSIZE=6000
 SAVEHIST=1000
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -156,6 +156,8 @@ ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=$LightSkyBlue3"
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=$MediumPurple"
 ZSH_HIGHLIGHT_STYLES[assign]="fg=$LightSalmon1"
 
+source $ZSH/oh-my-zsh.sh
+
 # FZF Integration
 if [[ -f ~/.fzf.zsh ]]; then
   source ~/.fzf.zsh
@@ -164,10 +166,4 @@ fi
 # Check to see if there are iTerm2 integrations, and load them.
 if [[ -f ~/.iterm2_shell_integration.zsh ]]; then
   source ~/.iterm2_shell_integration.zsh
-fi
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1 > /dev/null 2>&1; then
- eval "$(pyenv init -)"
 fi
