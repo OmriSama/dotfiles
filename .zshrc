@@ -111,9 +111,6 @@ if [[ -e ~/.local_config ]]; then
   source ~/.local_config
 fi
 
-# Stop correcting rspec to spec
-unsetopt correct_all
-
 # Defining colors
 Default='default'
 Green='#00af00'
@@ -157,6 +154,9 @@ ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=$MediumPurple"
 ZSH_HIGHLIGHT_STYLES[assign]="fg=$LightSalmon1"
 
 source $ZSH/oh-my-zsh.sh
+
+# Stop correcting rspec to spec
+unsetopt correct_all
 
 # FZF Integration
 if [[ -f ~/.fzf.zsh ]]; then
