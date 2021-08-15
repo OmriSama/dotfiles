@@ -66,9 +66,8 @@ fpath+=( ${ZDOTDIR:-~}/.zsh_functions "${fpath[@]}" )
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  asdf
   bundler
-  rbenv
-  pyenv
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
