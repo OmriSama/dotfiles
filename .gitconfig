@@ -6,6 +6,7 @@
 [pager]
 	branch = false
 [alias]
+	lola = "log --graph --decorate --pretty=oneline --abbrev-commit --all"
 	fap = fetch --all --prune
 	pr = pull --rebase
 	rom = rebase origin/master
@@ -16,3 +17,7 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[core]
+	autocrlf = input
+[pull]
+	rebase = true
