@@ -68,6 +68,7 @@ fpath+=( ${ZDOTDIR:-~}/.zsh_functions "${fpath[@]}" )
 plugins=(
   asdf
   bundler
+  fzf
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -156,11 +157,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Stop correcting rspec to spec
 unsetopt correct_all
-
-# FZF Integration
-if [[ -f ~/.fzf.zsh ]]; then
-  source ~/.fzf.zsh
-fi
 
 # Check to see if there are iTerm2 integrations, and load them.
 if [[ -f ~/.iterm2_shell_integration.zsh ]]; then
