@@ -1,15 +1,29 @@
 #!/bin/bash
 
-if [ -f /etc/lsb-release ]; then
-    sudo apt-get update \
-    && sudo apt-get upgrade \
-    && sudo apt install git wget curl zsh build-essential g++ \
-        gcc libssl-dev libreadline-dev zlib1g-dev
+if command -v apt-get > /dev/null; then
+  # Ubuntu/Debian specific
+  echo
+  echo "BOOTSTRAP: Found apt-get; installing..."
+  echo
+
+  sudo apt-get update \
+  && sudo apt-get upgrade \
+  && sudo apt install git wget curl zsh build-essential g++ \
+      gcc libssl-dev libreadline-dev zlib1g-dev
+elif command -v pacman > /dev/null; then
+  # Arch/Manjaro specific
+  echo
+  echo "BOOTSTRAP: Found pacman; installing..."
+  echo
+
+  if ! command -v yay > /dev/null; then
+    sudo pacman -Syu --needed git gcc base-devel yay
+  fi
+
+  yay -Syu --needed wget curl zsh openssl readline
 fi
 
-export ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
-
-# Install oh-my-zsh
+# # Install oh-my-zsh
 sh -c \
   "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
