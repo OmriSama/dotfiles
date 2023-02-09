@@ -1,6 +1,5 @@
 [user]
 	name = Omri Gabay
-	email = omri@omrigabay.me
 [http]
 	sslVerify = true
 [pager]
@@ -21,3 +20,5 @@
 	autocrlf = input
 [pull]
 	rebase = true
+[gpg]
+	format = ssh
