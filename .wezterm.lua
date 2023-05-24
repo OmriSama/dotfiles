@@ -1,6 +1,7 @@
 local wezterm = require 'wezterm'
 
 return {
+  default_cursor_style = 'SteadyBar',
   font = wezterm.font 'Fira Code',
   font_size = 15.7,
   keys = {
