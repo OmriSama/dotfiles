@@ -1,5 +1,6 @@
 [user]
 	name = Omri Gabay
+	email = omri@omrigabay.me
 [http]
 	sslVerify = true
 [pager]
